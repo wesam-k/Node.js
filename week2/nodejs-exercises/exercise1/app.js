@@ -13,12 +13,6 @@ app.post('/blogs', (req, res) => {
     res.end('post title and content')
 });
 
-app.get('/blogs/:title', (req, res) => {
-    const title= req.params.title;
-    res.sendfile(title);
-    res.end('ok')
-})
-
 
 app.put('/blogs', (req, res) => {
     const title= req.body.title;
@@ -38,6 +32,12 @@ app.delete('/blogs/:title', (req, res) => {
     res.end('title file is deleted');
 });
 
+
+app.get('/blogs/:title', (req, res) => {
+  const title= req.params.title;
+  res.sendfile(title);
+  res.end('ok')
+})
 
 
 
