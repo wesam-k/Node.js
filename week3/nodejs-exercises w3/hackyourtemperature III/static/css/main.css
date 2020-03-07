@@ -1,0 +1,36 @@
+.container {
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    background-color: #ACF0CB;
+}
+
+p {
+    color: #CE229D;
+    font-size: 22px;
+    margin-top: 40px;
+
+
+}
+
+h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #CE229D;
+    padding-top: 50px;
+}
+
+.pAndForm {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+#input {
+    font-size: 18px;
+}
+
+button {
+    font-size: 18px;
+}

@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="pAndForm">
+        <p>{{weatherText}}</p>
+        <p>{{errorMessage}}</p>
+        <form action="/weather" method="post">
+            <input type="text" name="cityName" placeholder="city name" id="input">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <h3>{{degreesCelsius}}</h3>
+</div>
