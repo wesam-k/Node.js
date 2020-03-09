@@ -1,9 +1,7 @@
 'use strict'
 
-const express = require("express");
-const app = express();
 const fetch = require('node-fetch');
-const port = 3000;
+
 
 
 const people = {
@@ -11,7 +9,7 @@ const people = {
     "numberOfPeople": 5
 }
 
-app.get('/', (req, res) => {
+function nodeFetch() {
     const url = "https://reservation100-sandbox.mxapps.io/api/reservations";
     fetch(url, {
             method: 'post',
@@ -20,14 +18,14 @@ app.get('/', (req, res) => {
                 'Content-Type': 'application/json'
             }
         })
+        .then(res =>{
+            return res.text()
+        })
         .then(res => {
             console.log(res)
         })
         .catch(err => {
             console.log(err);
         })
-})
-
-
-
-app.listen(port, () => console.log("here you are", port));
+};
+nodeFetch();
