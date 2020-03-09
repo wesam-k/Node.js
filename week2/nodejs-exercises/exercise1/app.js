@@ -13,9 +13,8 @@ app.post('/blogs', (req, res) => {
     res.end('post title and content')
 });
 
-
 app.put('/blogs', (req, res) => {
-    const title= req.body.title;
+    const title= req.body.title;z
     const content = req.body.content;
     if (fs.existsSync(title)) {
       fs.writeFileSync(title, content);
@@ -35,9 +34,10 @@ app.delete('/blogs/:title', (req, res) => {
 
 app.get('/blogs/:title', (req, res) => {
   const title= req.params.title;
-  res.sendfile(title);
+  res.sendFile(title);
   res.end('ok')
 })
+
 
 
 

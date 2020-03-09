@@ -8,7 +8,7 @@ let server = http.createServer(function (req, res) {
     res.writeHead(200, {
       'Content-Type': 'application/javascript'
     })
-    res.write(fs.readFile('script.js'));
+    res.write(fs.readFileSyns('script.js'));
     } else {
     res.write(`<html>
     <head>
